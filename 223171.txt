@@ -1,0 +1,516 @@
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/Zimbakov/SI_2024_lab1_223171/.git/
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git add README
+fatal: pathspec 'README' did not match any files
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git add README.md
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ touch README.md
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ nano README.md
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git remote origin https://github.com/ZimbakovAdam21/SI_2024_lab1_223171.git
+error: unknown subcommand: `origin'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --[no-]verbose    be verbose; must be placed before a subcommand
+
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git remote -v
+origin  https://github.com/ZimbakovAdam21/SI_2024_lab1_223171.git (fetch)
+origin  https://github.com/ZimbakovAdam21/SI_2024_lab1_223171.git (push)
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git remote add origin https://github.com/ZimbakovAdam21/SI_2024_lab1_223171.git
+error: remote origin already exists.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git commit -m "Initial commit"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ nano file2
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git add file1 file2 file3
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git diff --staged
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ ls
+README.md  file1  file2  file3
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ rm file1 file2 file3
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ ls
+README.md
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ touch SILab1_1.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ ls
+README.md  SILab1Main.java  SILab1_1.java  SILab1_2.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ nano SILab1_1.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git log
+commit 2bd2bb54af516a2b0b40dd7c7ff43806c6f0833c (HEAD -> master)
+Author: unknown <zimbakovadam18@gmail.com>
+Date:   Wed Apr 3 19:24:35 2024 +0200
+
+    Add starter code
+
+commit 4cd74bfe38fca8d9a4de515e5c2c5942cd94aab5 (origin/master)
+Author: unknown <zimbakovadam18@gmail.com>
+Date:   Wed Apr 3 18:58:11 2024 +0200
+
+    Initial commit
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git reset -HARD^
+error: unknown switch `H'
+usage: git reset [--mixed | --soft | --hard | --merge | --keep] [-q] [<commit>]
+   or: git reset [-q] [<tree-ish>] [--] <pathspec>...
+   or: git reset [-q] [--pathspec-from-file [--pathspec-file-nul]] [<tree-ish>]
+   or: git reset --patch [<tree-ish>] [--] [<pathspec>...]
+   or: DEPRECATED: git reset [-q] [--stdin [-z]] [<tree-ish>]
+
+    -q, --[no-]quiet      be quiet, only report errors
+    --no-refresh          skip refreshing the index after reset
+    --refresh             opposite of --no-refresh
+    --mixed               reset HEAD and index
+    --soft                reset only HEAD
+    --hard                reset HEAD, index and working tree
+    --merge               reset HEAD, index and working tree
+    --keep                reset HEAD but keep local changes
+    --[no-]recurse-submodules[=<reset>]
+                          control recursive updating of submodules
+    -p, --[no-]patch      select hunks interactively
+    -N, --[no-]intent-to-add
+                          record only the fact that removed paths will be added later
+    --[no-]pathspec-from-file <file>
+                          read pathspec from file
+    --[no-]pathspec-file-nul
+                          with --pathspec-from-file, pathspec elements are separated with NUL character
+    -z                    DEPRECATED (use --pathspec-file-nul instead): paths are separated with NUL character
+    --[no-]stdin          DEPRECATED (use --pathspec-from-file=- instead): read paths from <stdin>
+
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git reset -hard
+error: did you mean `--hard` (with two dashes)?
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git reset --hard
+HEAD is now at 2bd2bb5 Add starter code
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git reset --hard HEAD^
+HEAD is now at 4cd74bf Initial commit
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git log
+commit 4cd74bfe38fca8d9a4de515e5c2c5942cd94aab5 (HEAD -> master, origin/master)
+Author: unknown <zimbakovadam18@gmail.com>
+Date:   Wed Apr 3 18:58:11 2024 +0200
+
+    Initial commit
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ ls
+README.md  SILab1Main.java  SILab1_1.java  SILab1_2.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        SILab1Main.java
+        SILab1_1.java
+        SILab1_2.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git add --all
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   SILab1Main.java
+        new file:   SILab1_1.java
+        new file:   SILab1_2.java
+
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git commit -m "Add starter code"
+[master 9beb4ab] Add starter code
+ 3 files changed, 47 insertions(+)
+ create mode 100644 SILab1Main.java
+ create mode 100644 SILab1_1.java
+ create mode 100644 SILab1_2.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ ls
+README.md  SILab1Main.java  SILab1_1.java  SILab1_2.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git push -u origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 1.12 KiB | 229.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ZimbakovAdam21/SI_2024_lab1_223171.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git branch bug1
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git branch bug2
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ ls
+README.md  SILab1Main.java  SILab1_1.java  SILab1_2.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git branch
+  bug1
+  bug2
+* master
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug1)
+$ vim SILab1_1.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug1)
+$ nano SILab1_1.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug1)
+$ git add SILab1_1.java
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug1)
+$ git commit -m "Fix wrong condition in filterOddLengthStrings"
+[bug1 451d787] Fix wrong condition in filterOddLengthStrings
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug1)
+$ git status
+On branch bug1
+nothing to commit, working tree clean
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2)
+$ nano SILab1_2.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2)
+$ git add SILab1_2.java
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2)
+$ git commit -m "Fix wrong condition in makeBigStringFrom"
+[bug2 fa4350a] Fix wrong condition in makeBigStringFrom
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug1)
+$ ls
+README.md  SILab1Main.java  SILab1_1.java  SILab1_2.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug1)
+$ nano SILab1Main.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug1)
+$ git add SILab1Main.java
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug1)
+$ git commit -m "Call method filterOddLengthStrings in main class"
+[bug1 1c3de88] Call method filterOddLengthStrings in main class
+ 1 file changed, 1 insertion(+)
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2)
+$ nano SILab1Main.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2)
+$ git add SILab1Main.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2)
+$ git commit -m "Call method makeBigStringFrom in main class"
+[bug2 02b110c] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2)
+$ git push -u origin master
+Everything up-to-date
+branch 'master' set up to track 'origin/master'.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2)
+$ git push -u origin bug2
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 676 bytes | 676.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'bug2' on GitHub by visiting:
+remote:      https://github.com/ZimbakovAdam21/SI_2024_lab1_223171/pull/new/bug2
+remote:
+To https://github.com/ZimbakovAdam21/SI_2024_lab1_223171.git
+ * [new branch]      bug2 -> bug2
+branch 'bug2' set up to track 'origin/bug2'.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2)
+$ git push -u origin bug1
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 737 bytes | 368.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug1' on GitHub by visiting:
+remote:      https://github.com/ZimbakovAdam21/SI_2024_lab1_223171/pull/new/bug1
+remote:
+To https://github.com/ZimbakovAdam21/SI_2024_lab1_223171.git
+ * [new branch]      bug1 -> bug1
+branch 'bug1' set up to track 'origin/bug1'.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git merge bug1
+Updating 9beb4ab..1c3de88
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_1.java   | 4 ++--
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git push -u origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ZimbakovAdam21/SI_2024_lab1_223171.git
+   9beb4ab..1c3de88  master -> master
+branch 'master' set up to track 'origin/master'.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git push -u origin bug1
+Everything up-to-date
+branch 'bug1' set up to track 'origin/bug1'.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git push -u origin bug2
+Everything up-to-date
+branch 'bug2' set up to track 'origin/bug2'.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git checkout bug2
+Switched to branch 'bug2'
+Your branch is up to date with 'origin/bug2'.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2)
+$ git help rebase
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2)
+$ git rebase
+Current branch bug2 is up to date.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2)
+$ git rebase master
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+error: could not apply 02b110c... Call method makeBigStringFrom in main class
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 02b110c... Call method makeBigStringFrom in main class
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2|REBASE 2/2)
+$ nano SILabMain.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2|REBASE 2/2)
+$ rm
+.git/            README.md        SILab1Main.java  SILab1_1.java    SILab1_2.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2|REBASE 2/2)
+$ rm
+.git/            README.md        SILab1Main.java  SILab1_1.java    SILab1_2.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2|REBASE 2/2)
+$ rm SILabMain.java
+rm: cannot remove 'SILabMain.java': No such file or directory
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2|REBASE 2/2)
+$ ls
+README.md  SILab1Main.java  SILab1_1.java  SILab1_2.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2|REBASE 2/2)
+$ nano SILab1Main.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2|REBASE 2/2)
+$ git add SILab1Main.java
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2|REBASE 2/2)
+$ git rebase --continue
+[detached HEAD 6c86226] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+Successfully rebased and updated refs/heads/bug2.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (bug2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git merge bug2
+Updating 1c3de88..6c86226
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_2.java   | 4 ++--
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git push -u origin master bug2 bug1
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 718 bytes | 718.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/ZimbakovAdam21/SI_2024_lab1_223171.git
+   1c3de88..6c86226  master -> master
+ ! [rejected]        bug2 -> bug2 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/ZimbakovAdam21/SI_2024_lab1_223171.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you want to integrate the remote changes, use 'git pull'
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+branch 'bug1' set up to track 'origin/bug1'.
+branch 'master' set up to track 'origin/master'.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git push -u origin master
+Everything up-to-date
+branch 'master' set up to track 'origin/master'.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git push -u origin bug1
+Everything up-to-date
+branch 'bug1' set up to track 'origin/bug1'.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git push -u origin bug2
+To https://github.com/ZimbakovAdam21/SI_2024_lab1_223171.git
+ ! [rejected]        bug2 -> bug2 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/ZimbakovAdam21/SI_2024_lab1_223171.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you want to integrate the remote changes, use 'git pull'
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git push -u --force bug2
+fatal: 'bug2' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Zimbakov@DESKTOP-0BK4Q6N MINGW64 ~/SI_2024_lab1_223171 (master)
+$ git push -u --force origin bug2
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ZimbakovAdam21/SI_2024_lab1_223171.git
+ + 02b110c...6c86226 bug2 -> bug2 (forced update)
+branch 'bug2' set up to track 'origin/bug2'.

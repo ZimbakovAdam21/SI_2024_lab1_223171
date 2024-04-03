@@ -1,0 +1,37 @@
+[33mcommit 6c86226a738b7a1e4e4ba6d462f65aa21723fa22[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/bug2[m[33m, [m[1;32mbug2[m[33m)[m
+Author: unknown <zimbakovadam18@gmail.com>
+Date:   Wed Apr 3 20:34:24 2024 +0200
+
+    Call method makeBigStringFrom in main class
+    
+     interactive rebase in progress; onto 1c3de88
+
+[33mcommit 73b3384093d2202e707afc943e3b4f679b5dacb4[m
+Author: unknown <zimbakovadam18@gmail.com>
+Date:   Wed Apr 3 20:30:09 2024 +0200
+
+    Fix wrong condition in makeBigStringFrom
+
+[33mcommit 1c3de8830994d39d6bbee767e1c49ee0700b7b11[m[33m ([m[1;31morigin/bug1[m[33m, [m[1;32mbug1[m[33m)[m
+Author: unknown <zimbakovadam18@gmail.com>
+Date:   Wed Apr 3 20:32:36 2024 +0200
+
+    Call method filterOddLengthStrings in main class
+
+[33mcommit 451d7873b7760bd94770be969d81da2031d62b32[m
+Author: unknown <zimbakovadam18@gmail.com>
+Date:   Wed Apr 3 20:28:13 2024 +0200
+
+    Fix wrong condition in filterOddLengthStrings
+
+[33mcommit 9beb4ab07be1aca8600423e5fcddc63989509ec0[m
+Author: unknown <zimbakovadam18@gmail.com>
+Date:   Wed Apr 3 20:07:02 2024 +0200
+
+    Add starter code
+
+[33mcommit 4cd74bfe38fca8d9a4de515e5c2c5942cd94aab5[m
+Author: unknown <zimbakovadam18@gmail.com>
+Date:   Wed Apr 3 18:58:11 2024 +0200
+
+    Initial commit
